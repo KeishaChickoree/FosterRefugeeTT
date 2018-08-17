@@ -1,0 +1,125 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appService_FosterRefugeeTT20180816095257_name": {
+      "type": "string"
+    },
+    "appServicePlan_FosterRefugeeTT20180816095257Plan_location": {
+      "type": "string"
+    },
+    "appServicePlan_FosterRefugeeTT20180816095257Plan_name": {
+      "type": "string"
+    },
+    "appServicePlan_FosterRefugeeTT20180816095257Plan_resourceGroup": {
+      "type": "string"
+    },
+    "dbserver_fosterrefugeett_FosterRefugeeTT20180816095257_db_name": {
+      "type": "string"
+    },
+    "dbserver_fosterrefugeett_name": {
+      "type": "string"
+    },
+    "dbserver_fosterrefugeett_FosterRefugeeTT20180816095257_db_adminlogin": {
+      "type": "string"
+    },
+    "dbserver_fosterrefugeett_FosterRefugeeTT20180816095257_db_adminpassword": {
+      "type": "securestring"
+    },
+    "dbserver_fosterrefugeett_FosterRefugeeTT20180816095257_db_location": {
+      "type": "string"
+    },
+    "appServicePlan_FosterRefugeeTT20180816095257Plan_skuName": {
+      "type": "string"
+    },
+    "appServicePlan_FosterRefugeeTT20180816095257Plan_skuTier": {
+      "type": "string"
+    },
+    "appServicePlan_FosterRefugeeTT20180816095257Plan_skuFamily": {
+      "type": "string"
+    },
+    "appServicePlan_FosterRefugeeTT20180816095257Plan_skuSize": {
+      "type": "string"
+    },
+    "appServicePlan_FosterRefugeeTT20180816095257Plan_workerSizeId": {
+      "type": "int"
+    }
+  },
+  "resources": [
+    {
+      "location": "[parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_location')]",
+      "name": "[parameters('appService_FosterRefugeeTT20180816095257_name')]",
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2015-08-01",
+      "tags": {
+        "[concat('hidden-related:', resourceId(parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_resourceGroup'),'Microsoft.Web/serverfarms', parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_name')))]": "empty"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverFarms', parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_name'))]",
+        "[concat('Microsoft.Sql/servers/', parameters('dbserver_fosterrefugeett_name'))]"
+      ],
+      "kind": "app",
+      "properties": {
+        "name": "[parameters('appService_FosterRefugeeTT20180816095257_name')]",
+        "serverFarmId": "[resourceId(parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_resourceGroup'),'Microsoft.Web/serverfarms', parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_name'))]",
+        "kind": "app"
+      },
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "resources": [
+        {
+          "name": "connectionstrings",
+          "type": "config",
+          "apiVersion": "2015-08-01",
+          "dependsOn": [
+            "[concat('Microsoft.Web/Sites/', parameters('appService_FosterRefugeeTT20180816095257_name'))]"
+          ],
+          "properties": {
+            "FosRefTT": {
+              "value": "[concat('Data Source=tcp:', reference(concat('Microsoft.Sql/servers/', parameters('dbserver_fosterrefugeett_name'))).fullyQualifiedDomainName, ',1433;Initial Catalog=', parameters('dbserver_fosterrefugeett_FosterRefugeeTT20180816095257_db_name'), ';User Id=', parameters('dbserver_fosterrefugeett_FosterRefugeeTT20180816095257_db_adminlogin'), '@', parameters('dbserver_fosterrefugeett_name'), ';Password=', parameters('dbserver_fosterrefugeett_FosterRefugeeTT20180816095257_db_adminpassword'))]",
+              "type": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "location": "[parameters('dbserver_fosterrefugeett_FosterRefugeeTT20180816095257_db_location')]",
+      "name": "[parameters('dbserver_fosterrefugeett_name')]",
+      "type": "Microsoft.Sql/servers",
+      "apiVersion": "2014-04-01-preview",
+      "properties": {},
+      "resources": [
+        {
+          "location": "[parameters('dbserver_fosterrefugeett_FosterRefugeeTT20180816095257_db_location')]",
+          "name": "[parameters('dbserver_fosterrefugeett_FosterRefugeeTT20180816095257_db_name')]",
+          "type": "databases",
+          "apiVersion": "2014-04-01-preview",
+          "dependsOn": [
+            "[concat('Microsoft.Sql/servers/', parameters('dbserver_fosterrefugeett_name'))]"
+          ],
+          "properties": {
+            "collation": "SQL_Latin1_General_CP1_CI_AS",
+            "maxSizeBytes": "1073741824"
+          }
+        }
+      ]
+    },
+    {
+      "location": "[parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_location')]",
+      "name": "[parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_name')]",
+      "type": "Microsoft.Web/serverfarms",
+      "apiVersion": "2015-08-01",
+      "sku": {
+        "name": "[parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_skuName')]",
+        "tier": "[parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_skuTier')]",
+        "family": "[parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_skuFamily')]",
+        "size": "[parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_skuSize')]"
+      },
+      "properties": {
+        "name": "[parameters('appServicePlan_FosterRefugeeTT20180816095257Plan_name')]"
+      }
+    }
+  ]
+}
