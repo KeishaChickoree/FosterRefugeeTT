@@ -1,0 +1,11 @@
+C:\Users\keish\source\repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeAPI\bin\Debug\netcoreapp2.0\FosterRefugeeAPI.deps.json
+C:\Users\keish\source\repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeAPI\bin\Debug\netcoreapp2.0\FosterRefugeeAPI.runtimeconfig.json
+C:\Users\keish\source\repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeAPI\bin\Debug\netcoreapp2.0\FosterRefugeeAPI.runtimeconfig.dev.json
+C:\Users\keish\source\repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeAPI\bin\Debug\netcoreapp2.0\FosterRefugeeAPI.dll
+C:\Users\keish\source\repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeAPI\bin\Debug\netcoreapp2.0\FosterRefugeeAPI.pdb
+C:\Users\keish\source\repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeAPI\obj\Debug\netcoreapp2.0\FosterRefugeeAPI.csprojAssemblyReference.cache
+C:\Users\keish\source\repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeAPI\obj\Debug\netcoreapp2.0\FosterRefugeeAPI.csproj.CoreCompileInputs.cache
+C:\Users\keish\source\repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeAPI\obj\Debug\netcoreapp2.0\FosterRefugeeAPI.AssemblyInfoInputs.cache
+C:\Users\keish\source\repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeAPI\obj\Debug\netcoreapp2.0\FosterRefugeeAPI.AssemblyInfo.cs
+C:\Users\keish\source\repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeAPI\obj\Debug\netcoreapp2.0\FosterRefugeeAPI.dll
+C:\Users\keish\source\repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeAPI\obj\Debug\netcoreapp2.0\FosterRefugeeAPI.pdb
