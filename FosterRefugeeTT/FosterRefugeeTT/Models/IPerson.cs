@@ -8,5 +8,10 @@ namespace FosterRefugeeTT.Models
 {
     interface IPerson
     {
+        String Name { get; set; }
+        String Nationality { get; set; }
+        String HighestLevelOfEducation { get; set; }
+        
+
     }
 }
