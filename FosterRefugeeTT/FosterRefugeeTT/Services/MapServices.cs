@@ -6,7 +6,7 @@ using GoogleMapsAPI.NET;
 
 namespace FosterRefugeeTT.Services
 {
-    public class MapServices
+    public class MapServices : IMapServices
     {
         String key = "AIzaSyDfofTICKQNkIYGumbQd-qKEhWRgZksWlI";
 

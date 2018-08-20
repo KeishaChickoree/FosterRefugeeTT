@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace FosterRefugeeTT.Services
 {
-    interface IPersonServices
+    public interface IPersonServices
     {
+        string getCurrentUserGreeting();
+
     }
 }
