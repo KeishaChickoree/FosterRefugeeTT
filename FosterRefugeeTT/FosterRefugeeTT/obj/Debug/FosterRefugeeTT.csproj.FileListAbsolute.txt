@@ -130,4 +130,3 @@ C:\Users\keish\Source\Repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeTT\obj\
 C:\Users\keish\Source\Repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeTT\obj\Debug\FosterRefugeeTT.csproj.CopyComplete
 C:\Users\keish\Source\Repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeTT\obj\Debug\FosterRefugeeTT.dll
 C:\Users\keish\Source\Repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeTT\obj\Debug\FosterRefugeeTT.pdb
-C:\Users\keish\Source\Repos\FosterRefugeeTT\FosterRefugeeTT\FosterRefugeeTT\obj\Debug\FosterRefugeeTT.csprojAssemblyReference.cache

@@ -5,7 +5,11 @@ using System.Web;
 
 namespace FosterRefugeeTT.Models
 {
-    public class Host
+    public class Host : Person
     {
+        public Host():base()
+        {
+        }
+
     }
 }

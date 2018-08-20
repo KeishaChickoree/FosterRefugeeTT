@@ -256,15 +256,15 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\DocumentType.cs" />
     <Compile Include="Models\Host.cs" />
     <Compile Include="Models\HostHistory.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\IPerson.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MeViewModels.cs" />
-    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Refugee.cs" />
     <Compile Include="Models\SafeZone.cs" />
     <Compile Include="Models\Story.cs" />
