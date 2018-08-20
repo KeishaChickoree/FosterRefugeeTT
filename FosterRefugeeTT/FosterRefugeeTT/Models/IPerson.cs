@@ -11,7 +11,8 @@ namespace FosterRefugeeTT.Models
         String Name { get; set; }
         String Nationality { get; set; }
         String HighestLevelOfEducation { get; set; }
-        
-
+        Story MyStory { get; set; }
+        UserProfile MyProfile { get; set; }
+        Document SupportingDocuments { get; set; }
     }
 }

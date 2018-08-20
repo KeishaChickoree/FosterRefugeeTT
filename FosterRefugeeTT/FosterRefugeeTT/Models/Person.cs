@@ -5,7 +5,7 @@ using System.Web;
 
 namespace FosterRefugeeTT.Models
 {
-    public class Person : IPerson
+    public class Person 
     {
     }
 }
