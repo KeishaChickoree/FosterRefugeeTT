@@ -12,7 +12,7 @@ namespace FosterRefugeeTT.Models
     public class SafeZone
     {
         [Key]
-        protected Guid SafeZoneKey { get; set; }
+        public Guid SafeZoneKey { get; set; }
         protected String Name { get; set; }
         protected Location Address { get; set; }
         protected Person KeyContact { get; set; }

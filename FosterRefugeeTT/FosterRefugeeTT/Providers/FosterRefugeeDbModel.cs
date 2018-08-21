@@ -36,5 +36,7 @@ namespace FosterRefugeeTT.Providers
                 .WithRequired(e => e.AspNetUsers)
                 .HasForeignKey(e => e.UserId);
         }
+
+        public System.Data.Entity.DbSet<FosterRefugeeTT.Models.Person> People { get; set; }
     }
 }

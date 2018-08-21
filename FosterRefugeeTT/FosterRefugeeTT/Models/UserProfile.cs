@@ -4,8 +4,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FosterRefugeeTT.Models
 {
+    [ScaffoldTable(true)]
     public class UserProfile
     {
+        [Key]
+        public Person User { get; set; }
         string FirstName { get; set; }
         string MiddleName { get; set; }
         string LastName { get; set; }
